@@ -422,14 +422,15 @@ namespace Ad3OpdrachtSamGhesquiere
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
 
-            for (int i = 1; i <= lstAgendas.Items.Count; i++)
+
+            xlWorkSheet.Cells[1, 1] = lstAgendas.SelectedItem.ToString();
+
+            for (int j = 2; j <= lstAppointments.Items.Count; j++)
             {
-                xlWorkSheet.Cells[i, 1] = lstAppointments.Items[i - 1].ToString();
-                for (int j = 2; j <= lstAppointments.Items.Count; j++)
-                {
-                    xlWorkSheet.Cells[i, j] = lstAppointments.Items[j - 2].ToString();
-                }
+                xlWorkSheet.Cells[1, j] = lstAppointments.Items[j - 2].ToString();
+
             }
+
             xlWorkBook.Close(true, misValue, misValue);
             xlApp.Quit();
 
