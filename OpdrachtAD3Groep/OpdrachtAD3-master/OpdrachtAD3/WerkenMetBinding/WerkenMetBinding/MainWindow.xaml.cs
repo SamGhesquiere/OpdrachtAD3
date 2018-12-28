@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -143,7 +144,7 @@ namespace Ad3OpdrachtSamGhesquiere
             Agenda modifyAgenda = (lstAgendas.SelectedItem as Agenda);
             foreach (Appointment appointment in modifyAgenda.Appointments)
             {
-                if (appointment.Name == txtName.Name &&( appointment.DateStart.ToString("HH") == ComboStartUur.SelectedItem.ToString() && (appointment.DateStart.ToString("mm") == ComboStartMinuten.SelectedItem.ToString())))
+                if (appointment.Name == txtName.Name && (appointment.DateStart.ToString("HH") == ComboStartUur.SelectedItem.ToString() && (appointment.DateStart.ToString("mm") == ComboStartMinuten.SelectedItem.ToString())))
                 {
                     MessageBox.Show("Er bestaat al een appointment met deze naam en starttijd");
                     return false;
@@ -362,7 +363,7 @@ namespace Ad3OpdrachtSamGhesquiere
 
         private void ReapeatAppointment_Click(object sender, RoutedEventArgs e)
         {
-            
+
 
             if (AppointmentSelectedtest() && CheckWeekCount())
             {
@@ -374,15 +375,15 @@ namespace Ad3OpdrachtSamGhesquiere
                 int uurEind = Convert.ToInt32(ComboEindUur.Text);
                 int minutenEind = Convert.ToInt32(ComboEindMinuten.Text);
 
-                for (int i = 1; i<=weekCount; i++)
-                { 
-                    DateTime StartDatum = ComboToDate(Calendar.SelectedDate.Value.AddDays(7*i), uurStart, minutenStart);
+                for (int i = 1; i <= weekCount; i++)
+                {
+                    DateTime StartDatum = ComboToDate(Calendar.SelectedDate.Value.AddDays(7 * i), uurStart, minutenStart);
                     DateTime EindDatum = ComboToDate(Calendar.SelectedDate.Value, uurEind, minutenEind);
                     Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, 1);
                     modifyAgenda.Appointments.Add(newAppointment);
                     database.InsertAppointment(modifyAgenda, newAppointment);
                 }
-         
+
             }
             else
             {
@@ -402,6 +403,42 @@ namespace Ad3OpdrachtSamGhesquiere
                 return true;
             }
         }
+
+        private void btnExportToExel_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+
+            if (xlApp == null)
+            {
+                MessageBox.Show("Excel is not properly installed!");
+                return;
+            }
+
+
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            for (int i = 1; i <= lstAgendas.Items.Count; i++)
+            {
+                xlWorkSheet.Cells[i, 1] = lstAppointments.Items[i - 1].ToString();
+                for (int j = 2; j <= lstAppointments.Items.Count; j++)
+                {
+                    xlWorkSheet.Cells[i, j] = lstAppointments.Items[j - 2].ToString();
+                }
+            }
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            Marshal.ReleaseComObject(xlWorkSheet);
+            Marshal.ReleaseComObject(xlWorkBook);
+            Marshal.ReleaseComObject(xlApp);
+        }
     }
+
 }
+
 

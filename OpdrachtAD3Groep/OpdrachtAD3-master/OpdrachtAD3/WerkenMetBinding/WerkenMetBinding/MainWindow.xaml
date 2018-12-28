@@ -85,7 +85,7 @@
             <ComboBoxItem Content="50" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="55" HorizontalAlignment="Left" Width="75"/>
         </ComboBox>
-       
+
         <ComboBox Name="ComboStartUur" HorizontalAlignment="Left" Margin="108,572,0,0" VerticalAlignment="Top" Width="75" Height="32">
             <ComboBoxItem Content="0" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="75"/>
@@ -111,7 +111,7 @@
             <ComboBoxItem Content="21" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="22" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="23" HorizontalAlignment="Left" Width="75"/>
-            
+
         </ComboBox>
 
 
@@ -129,6 +129,7 @@
             <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="75"/>
 
         </ComboBox>
+        <Button Name="btnExportToExel" Content="Export selected agenda to Exel file" HorizontalAlignment="Left" Margin="141,471,0,0" VerticalAlignment="Top" Width="345" Click="btnExportToExel_Click"/>
 
     </Grid>
 </Window>
