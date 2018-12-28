@@ -15,16 +15,16 @@
             </Border>
         </DataTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid HorizontalAlignment="Left" Margin="0,0,0,0.4" Width="890">
         <ListBox ItemsSource ="{Binding Agendas}"  x:Name="lstAgendas" HorizontalAlignment="Left" Height="139" Margin="141,162,0,0" VerticalAlignment="Top" Width="345" SelectionChanged="lstAppointmentsUpdate"/>
         <ListBox ItemsSource ="{Binding Appointments}" x:Name="lstAppointments" HorizontalAlignment="Left" Height="139" Margin="141,306,0,0" VerticalAlignment="Top" Width="345" SelectionChanged="AppointmentContentUpdate"/>
-        <Button Name="btnAddAgenda" Content="Add Agenda" HorizontalAlignment="Left" Margin="550,182,0,0" VerticalAlignment="Top" Width="170" Click="btnAddAgenda_Click"/>
-        <Button Name="btnDeleteAgenda" Content="Delete Agenda" HorizontalAlignment="Left" Margin="550,217,0,0" VerticalAlignment="Top" Width="170" Click="btnDeleteAgenda_Click"/>
-        <Button Name="btnChangeNameAgenda" Content="Change Name Agenda" HorizontalAlignment="Left" Margin="550,252,0,0" VerticalAlignment="Top" Width="170" Click="btnChangeNameAgenda_Click"/>
+        <Button Name="btnAddAgenda" Content="Add Agenda" HorizontalAlignment="Left" Margin="534,182,0,0" VerticalAlignment="Top" Width="217" Click="btnAddAgenda_Click"/>
+        <Button Name="btnDeleteAgenda" Content="Delete Agenda" HorizontalAlignment="Left" Margin="534,217,0,0" VerticalAlignment="Top" Width="217" Click="btnDeleteAgenda_Click"/>
+        <Button Name="btnChangeNameAgenda" Content="Change Properties Agenda" HorizontalAlignment="Left" Margin="534,252,0,0" VerticalAlignment="Top" Width="217" Click="btnChangeNameAgenda_Click"/>
         <TextBox Name="txtName" HorizontalAlignment="Left" Height="29" Margin="141,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" />
-        <Button x:Name="btnAddAppointment" Content="Add Appointment" HorizontalAlignment="Left" Margin="550,326,0,0" VerticalAlignment="Top" Width="170" Click="btnAddAppointment_Click"/>
-        <Button x:Name="btnDeleteAppointment" Content="Delete Appointment" HorizontalAlignment="Left" Margin="550,361,0,0" VerticalAlignment="Top" Width="170" Click="btnDeleteAppointment_Click"/>
-        <Button x:Name="btnChangeNameAppointment" Content="Change Name Appointment" HorizontalAlignment="Left" Margin="550,396,0,0" VerticalAlignment="Top" Width="170" Click="btnChangeNameAppointment_Click"/>
+        <Button x:Name="btnAddAppointment" Content="Add Appointment" HorizontalAlignment="Left" Margin="534,326,0,0" VerticalAlignment="Top" Width="217" Click="btnAddAppointment_Click"/>
+        <Button x:Name="btnDeleteAppointment" Content="Delete Appointment" HorizontalAlignment="Left" Margin="534,361,0,0" VerticalAlignment="Top" Width="217" Click="btnDeleteAppointment_Click"/>
+        <Button x:Name="btnChangeNameAppointment" Content="Change Properties App" HorizontalAlignment="Left" Margin="534,396,0,0" VerticalAlignment="Top" Width="217" Click="btnChangeNameAppointment_Click"/>
         <TextBox Name="txtDescription" HorizontalAlignment="Left" Height="116" Margin="550,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
         <Calendar Name="Calendar" HorizontalAlignment="Left" Margin="550,471,0,0" VerticalAlignment="Top"/>
         <Label Content="New title:" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
@@ -116,8 +116,8 @@
 
 
         <Label Content="Van:" HorizontalAlignment="Left" Margin="61,572,0,0" VerticalAlignment="Top" Height="32"/>
-        <Button x:Name="btnRepeatAppointment" Content="Repeat Appointment" HorizontalAlignment="Left" Margin="550,432,0,0" VerticalAlignment="Top" Width="170" Click="ReapeatAppointment_Click"/>
-        <ComboBox x:Name="cmbWeekCount" HorizontalAlignment="Left" Margin="743,432,0,0" VerticalAlignment="Top" Width="120">
+        <Button x:Name="btnRepeatAppointment" Content="Repeat for x weeks" HorizontalAlignment="Left" Margin="534,432,0,0" VerticalAlignment="Top" Width="217" Click="ReapeatAppointment_Click"/>
+        <ComboBox x:Name="cmbWeekCount" HorizontalAlignment="Left" Margin="760,430,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="2" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="75"/>
             <ComboBoxItem Content="4" HorizontalAlignment="Left" Width="75"/>
@@ -130,6 +130,8 @@
 
         </ComboBox>
         <Button Name="btnExportToExel" Content="Export selected agenda to Exel file" HorizontalAlignment="Left" Margin="141,471,0,0" VerticalAlignment="Top" Width="345" Click="btnExportToExel_Click"/>
+        <CheckBox Name="checkPriority" Content="Priority" HorizontalAlignment="Left" Margin="239,633,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>

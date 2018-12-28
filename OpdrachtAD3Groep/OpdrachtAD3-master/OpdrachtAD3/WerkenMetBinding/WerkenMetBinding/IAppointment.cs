@@ -13,6 +13,7 @@ namespace Ad3OpdrachtSamGhesquiere
         DateTime DateStart { get; set; }
         DateTime DateEnd { get; set; }
         String Description { get; set; }
+        Boolean PriorityLevel { get; set; }
     }
 }
 

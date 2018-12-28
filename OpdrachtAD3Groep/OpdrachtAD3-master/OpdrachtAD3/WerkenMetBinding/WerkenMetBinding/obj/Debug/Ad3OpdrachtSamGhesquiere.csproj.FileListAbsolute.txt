@@ -63,3 +63,5 @@ C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD
 C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD3-master\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.exe
 C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD3-master\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.pdb
 C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD3-master\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\Ad3OpdrachtSamGhesquiere.csproj.ResolveComReference.cache
+C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD3-master\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\bin\Debug\itextsharp.dll
+C:\Users\Sam Ghesquiere\Documents\GitHub\OpdrachtAD3\OpdrachtAD3Groep\OpdrachtAD3-master\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\bin\Debug\itextsharp.xml

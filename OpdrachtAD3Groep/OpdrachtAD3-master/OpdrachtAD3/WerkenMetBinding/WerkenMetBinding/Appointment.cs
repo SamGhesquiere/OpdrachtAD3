@@ -16,6 +16,8 @@ namespace Ad3OpdrachtSamGhesquiere
         private DateTime _dateEnd;
         private String _desc;
         private int _idFromAgenda;
+        private Boolean _priorityLevel;
+        private String Priority;
 
         public String Name
         {
@@ -70,19 +72,41 @@ namespace Ad3OpdrachtSamGhesquiere
                     PropertyChanged(this, new PropertyChangedEventArgs("idFromAgenda"));
             }
         }
-        public Appointment(String name, DateTime dateStart, DateTime dateEnd, String description, int idFromAgenda)
+        public Boolean PriorityLevel
+        {
+            get { return _priorityLevel; }
+            set
+            {
+                _priorityLevel = value;
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs("priorityLevel"));
+                if(_priorityLevel == true)
+                {
+                    Priority = "!!!!";
+                }
+                else
+                {
+                    Priority = "";
+                }
+            }
+        }
+        public Appointment(String name, DateTime dateStart, DateTime dateEnd, String description, int idFromAgenda, Boolean priorityLevel)
         {
             Name = name;
             DateStart = dateStart;
             DateEnd = dateEnd;
             Description = description;
             IdFromAgenda = idFromAgenda;
+            PriorityLevel = priorityLevel;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string DatbaseDateFormat => Convert.ToString(DateStart);
-        public override string ToString() => $"{DateStart.Day}/{DateStart.Month} {DateStart.Hour}:{DateStart.Minute} - {DateEnd.Hour}:{DateEnd.Minute}, {Name}";
+
+       
+        
+        public override string ToString() => $"{Priority}  {DateStart.Day}/{DateStart.Month} {DateStart.Hour}:{DateStart.Minute} - {DateEnd.Hour}:{DateEnd.Minute}, {Name}";
         
     }
 }

@@ -129,9 +129,10 @@ namespace Ad3OpdrachtSamGhesquiere
 
                 DateTime StartDatum = ComboToDate(Calendar.SelectedDate.Value, uurStart, minutenStart);
                 DateTime EindDatum = ComboToDate(Calendar.SelectedDate.Value, uurEind, minutenEind);
-                Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, 1);
-                modifyAgenda.Appointments.Add(newAppointment);
-                database.InsertAppointment(modifyAgenda, newAppointment);
+                Boolean priorityLevel = checkPriority.IsChecked.Value;
+                Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, 1, priorityLevel);
+                modifyAgenda.Appointments.Add(newAppointment);             
+                database.InsertAppointment(modifyAgenda, newAppointment);                
             }
             else
             {
@@ -241,13 +242,15 @@ namespace Ad3OpdrachtSamGhesquiere
                 int RememberSelectedIndex = lstAppointments.SelectedIndex;
                 DateTime StartDatum = ComboToDate(Calendar.SelectedDate.Value, uurStart, minutenStart);
                 DateTime EindDatum = ComboToDate(Calendar.SelectedDate.Value, uurEind, minutenEind);
-                Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, modifyAgenda.Id);
+                Boolean priorityLevel = checkPriority.IsChecked.Value;
+                Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, modifyAgenda.Id, priorityLevel);
 
                 modifyAgenda.Appointments.Remove(lstAppointments.SelectedItem as Appointment);
                 database.DeleteAppointment(modifyAgenda, modifyAppointment);
                 modifyAgenda.Appointments.Add(newAppointment);
                 database.InsertAppointment(modifyAgenda, newAppointment);
                 lstAppointments.SelectedIndex = RememberSelectedIndex;
+                
 
             }
             else
@@ -374,12 +377,13 @@ namespace Ad3OpdrachtSamGhesquiere
                 int minutenStart = Convert.ToInt32(ComboStartMinuten.Text);
                 int uurEind = Convert.ToInt32(ComboEindUur.Text);
                 int minutenEind = Convert.ToInt32(ComboEindMinuten.Text);
+                Boolean priority = checkPriority.IsChecked.Value;
 
                 for (int i = 1; i <= weekCount; i++)
                 {
                     DateTime StartDatum = ComboToDate(Calendar.SelectedDate.Value.AddDays(7 * i), uurStart, minutenStart);
                     DateTime EindDatum = ComboToDate(Calendar.SelectedDate.Value, uurEind, minutenEind);
-                    Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, 1);
+                    Appointment newAppointment = new Appointment(txtName.Text, StartDatum, EindDatum, txtDescription.Text, 1, priority);
                     modifyAgenda.Appointments.Add(newAppointment);
                     database.InsertAppointment(modifyAgenda, newAppointment);
                 }

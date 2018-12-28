@@ -93,18 +93,14 @@ namespace Ad3OpdrachtSamGhesquiere
                 if (Convert.ToString(rowX["agendaId"]) == Convert.ToString(agenda.Id))
                 {
                     row = _dataset.Tables["tblAppointments"].NewRow();
-                   //row["appointmentId"] = 1;                 
+                                   
                     row["appointmentName"] = appointment.Name;
                     row["dateStart"] = appointment.DateStart;
                     row["dateEnd"] = appointment.DateEnd;
                     row["appointmentDescription"] = appointment.Description;
+                    row["priorityLevel"] = appointment.PriorityLevel;
 
-
-                    //int idFromAgenda;
-                    //using (SqlCommand command = new SqlCommand("SELECT agendaId FROM " + "tblAgendas" + " WHERE " + "agendaId" + " = '" + agenda.Id + "'", _connection))
-                    //{
-                    //  idFromAgenda = Convert.ToInt32(command.Parameters.Add("@agendaId", SqlDbType.Int).Value);
-                    //}
+                    
 
                     row["idFromAgenda"] = RequestAgendaId(Convert.ToString(agenda));
 
@@ -312,8 +308,8 @@ namespace Ad3OpdrachtSamGhesquiere
                     DateTime dateEnd = Convert.ToDateTime(rowAppointment["dateEnd"]);
                     String description = (String)rowAppointment["appointmentDescription"];
                     int idFromAgenda = (int)rowAppointment["idFromAgenda"];
-
-                    Appointment appointment = new Appointment(name, dateStart, dateEnd, description, idFromAgenda);
+                    Boolean priorityLevel = (Boolean)rowAppointment["priorityLevel"];
+                    Appointment appointment = new Appointment(name, dateStart, dateEnd, description, idFromAgenda, priorityLevel);
                     requestListAppointments.Add(appointment);
                 }
             }
