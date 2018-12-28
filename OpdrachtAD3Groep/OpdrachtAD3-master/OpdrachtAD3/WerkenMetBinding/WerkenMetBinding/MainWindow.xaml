@@ -131,6 +131,7 @@
         </ComboBox>
         <Button Name="btnExportToExel" Content="Export selected agenda to Exel file" HorizontalAlignment="Left" Margin="141,471,0,0" VerticalAlignment="Top" Width="345" Click="btnExportToExel_Click"/>
         <CheckBox Name="checkPriority" Content="Priority" HorizontalAlignment="Left" Margin="239,633,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnExportToTxt" Content="Export selected agenda to txt file" HorizontalAlignment="Left" Margin="141,506,0,0" VerticalAlignment="Top" Width="345" Click="btnExportToTXT_Click"/>
 
 
     </Grid>

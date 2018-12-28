@@ -281,7 +281,7 @@ namespace Ad3OpdrachtSamGhesquiere
             }
             else
             {
-                MessageBox.Show("U moet een datum meegeven aanduiden");
+                MessageBox.Show("U moet een datum meegeven door deze aan te duiden in de Kalender");
                 return false;
             }
         }
@@ -442,6 +442,75 @@ namespace Ad3OpdrachtSamGhesquiere
             Marshal.ReleaseComObject(xlWorkSheet);
             Marshal.ReleaseComObject(xlWorkBook);
             Marshal.ReleaseComObject(xlApp);
+        }
+        //private void btnExportToPDF_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //    DataTable dt = new DataTable();
+        //    dt.Clear();
+        //    dt.Columns.Add("Afspraak");
+
+        //    foreach (var item in lstAppointments.Items)
+        //    {
+        //        DataRow row1 = dt.NewRow();
+        //        row1[""] = item.ToString();
+        //        dt.Rows.Add(row1);
+
+        //    }
+
+        //    Document document = new Document();
+        //    PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(@"c:\Afspraken.pdf", FileMode.Create));
+        //    document.Open();
+        //    iTextSharp.text.Font font5 = iTextSharp.text.FontFactory.GetFont(FontFactory.HELVETICA, 5);
+
+        //    PdfPTable table = new PdfPTable(dt.Columns.Count);
+        //    PdfPRow row = null;
+        //    float[] widths = new float[] { 4f, 4f, 4f, 4f };
+
+        //    table.SetWidths(widths);
+
+        //    table.WidthPercentage = 100;
+        //    int iCol = 0;
+        //    string colname = "";
+        //    PdfPCell cell = new PdfPCell(new Phrase("Afspraken"));
+
+        //    cell.Colspan = dt.Columns.Count;
+
+        //    foreach (DataColumn c in dt.Columns)
+        //    {
+
+        //        table.AddCell(new Phrase(c.ColumnName, font5));
+        //    }
+
+        //    foreach (DataRow r in dt.Rows)
+        //    {
+        //        if (dt.Rows.Count > 0)
+        //        {
+        //            table.AddCell(new Phrase(r[0].ToString(), font5));
+        //            table.AddCell(new Phrase(r[1].ToString(), font5));
+        //            table.AddCell(new Phrase(r[2].ToString(), font5));
+        //            table.AddCell(new Phrase(r[3].ToString(), font5));
+        //        }
+        //    }
+        //    document.Add(table);
+        //    document.Close();
+        //}
+
+
+
+
+        private void btnExportToTXT_Click(object sender, RoutedEventArgs e)
+        {
+            const string sPath = "..\\Afspraken.txt";
+
+            System.IO.StreamWriter SaveFile = new System.IO.StreamWriter(sPath);
+            foreach (var item in lstAppointments.Items)
+            {
+                SaveFile.WriteLine(item.ToString());
+            }
+            SaveFile.Close();
+
+            MessageBox.Show("Bestand is opgeslagen");
         }
     }
 
