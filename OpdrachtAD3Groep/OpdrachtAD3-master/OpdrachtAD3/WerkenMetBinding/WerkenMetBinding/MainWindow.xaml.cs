@@ -421,7 +421,8 @@ namespace Ad3OpdrachtSamGhesquiere
 
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
+            xlWorkSheet.Name = lstAgendas.SelectedItem.ToString();
+            xlWorkBook.Title = lstAgendas.SelectedItem.ToString();
 
             xlWorkSheet.Cells[1, 1] = lstAgendas.SelectedItem.ToString();
 
