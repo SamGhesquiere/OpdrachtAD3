@@ -1,0 +1,32 @@
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.exe.config
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.exe
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.pdb
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csprojResolveAssemblyReference.cache
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\MainWindow.g.cs
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\App.g.cs
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding_MarkupCompile.cache
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding_MarkupCompile.lref
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\MainWindow.baml
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.g.resources
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.Properties.Resources.resources
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csproj.GenerateResource.Cache
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csproj.CoreCompileInputs.cache
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.exe
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.pdb
+C:\Users\serge.vancleynenbreu\source\repos\WerkenMetBinding\WerkenMetBinding\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csprojResolveAssemblyReference.cache
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\MainWindow.g.cs
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\App.g.cs
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding_MarkupCompile.cache
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding_MarkupCompile.lref
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.exe
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.pdb
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.exe.config
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.exe
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\bin\Debug\WerkenMetBinding.pdb
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\MainWindow.baml
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.g.resources
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.Properties.Resources.resources
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csproj.GenerateResource.Cache
+C:\Users\Sam Ghesquiere\Downloads\OpdrachtAD3\WerkenMetBinding\WerkenMetBinding\obj\Debug\WerkenMetBinding.csproj.CoreCompileInputs.cache
